@@ -64,12 +64,12 @@ struct MacroStrukt
   enum ESP32Positions position;
 }; // struktura opisująca przycisk
 
-// define the cymbols on the buttons of the keypads
+
 char hexaKeys[ROWS][COLS] = {
     {'0', '1', '2', '3', '4'},
     {'5', '6', '7', '8', '9'},
 
-};
+};// define the cymbols on the buttons of the keypads
 
 Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);     // tworzenie obiektu odpowiedzialnego za button arry
 RotaryEncoder encoder(encoderPin[0], encoderPin[1], RotaryEncoder::LatchMode::TWO03); // tworzenie obiektu odpowiedzialnego za enkoder do SurfaceDial
